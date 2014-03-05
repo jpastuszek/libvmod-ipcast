@@ -23,6 +23,7 @@ int vmod_clientip(struct sess *sp, const char *ipstring) {
 
 	memset(&hints, 0, sizeof(struct addrinfo));
 	hints.ai_family = AF_UNSPEC;
+	hints.ai_socktype = SOCK_STREAM;
 
 	// Don't attempt DNS resolution.
 	hints.ai_flags = AI_NUMERICHOST;
